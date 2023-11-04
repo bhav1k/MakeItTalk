@@ -23,7 +23,7 @@ In addition, our method generalizes well for faces and characters that were not 
 > [[Colab Demo]](quick_demo.ipynb)
 > [[Colab Demo TDLR]](quick_demo_tdlr.ipynb)
 
-![img](doc/pipeline.png)
+![img](doc/Pipeline.PNG)
 Model pipeline
 
 ## Requirements
