@@ -23,18 +23,8 @@ In addition, our method generalizes well for faces and characters that were not 
 > [[Colab Demo]](quick_demo.ipynb)
 > [[Colab Demo TDLR]](quick_demo_tdlr.ipynb)
 
-![img](doc/teaser.png)
-
-Figure. Given an audio speech signal and a single portrait image   as input (left), our model generates speaker-aware talking-head animations (right). 
-Both the speech signal and the input face image are not observed during the model training process.
-Our method creates both non-photorealistic cartoon animations (top) and natural human face videos (bottom).
-
-## Updates
-
-- [x] Generate new puppet! (tested on Ubuntu)
-- [x] Pre-trained models
-- [x] Google colab quick demo for natural faces [[detail]](quick_demo.ipynb) [[TDLR]](quick_demo_tdlr.ipynb)
-- [ ] Training code for each module
+![img](doc/pipeline.png)
+Model pipeline
 
 ## Requirements
 - Python environment 3.6
@@ -143,29 +133,6 @@ python main_gen_new_puppet.py <your_puppet_with_file_extension>
 | ![img](doc/landmark_adjust.png) | ![img](doc/landmark_closemouth.png) | ![img](doc/landmark_delauney.png)
 | :---: | :---: | :---: |
 | Landmark Adjustment Tool |  Closed lips estimation | Delaunay Triangulation |
-
-## Train
-
-### Train Voice Conversion Module
-Todo...
-
-### Train Content Branch
-- Create dataset root directory `<root_dir>`
-
-- Dataset: Download preprocessed dataset [[here]](https://drive.google.com/drive/folders/1EwuAy3j1b9Zc1MsidUfxG_pJGc_cV60O?usp=sharing), and put it under `<root_dir>/dump`.
-
-- Train script: Run script below. Models will be saved in `<root_dir>/ckpt/<train_instance_name>`.
-
-    ```shell script
-    python main_train_content.py --train --write --root_dir <root_dir> --name <train_instance_name>
-    ```
-  
-### Train Speaker-Aware Branch
-Todo...
-
-### Train Image-to-Image Translation
-
-Todo...
 
 ## [License](LICENSE.md)
 
